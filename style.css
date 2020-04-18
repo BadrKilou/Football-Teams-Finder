@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+}
+body{
+    background-image: linear-gradient(to right,#cee,rgb(231, 109, 184));
+    font-family: 'Open Sans', sans-serif;
+
+}
+h2{
+    margin-top: 12px;
+    color: rgb(75, 15, 15);
+}
+.flex{
+    display: flex;
+    padding: 18px;
+}
+
+input,button{
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    padding: 8px 12px;
+    font-size: 14px;
+    margin: 0;
+}
+
+input[type="text"]{
+    width: 300px;
+}
+
+.search-btn{
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 2;
+    outline: none;
+}
+.random-btn{
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 2;
+    outline: none;
+}
+
+.teams{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    
+}
+.team{
+    cursor: pointer;
+    position: relative;
+    height: 180px;
+    width: 180px;
+    text-align: center;
+
+}
+.team img{
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    border: 4px solid white;
+}
+
+.error{
+    background: #ffa4ac;
+    color: rgb(8, 7, 7);
+    padding: 12px 5px;
+    margin-top: 8px;
+    border-radius: 6px;
+    width: 50%;
+    text-align: center;
+}
+
+.team-info{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: .5s;
+}
+.team .team-info:hover{
+   opacity: 1;
+   color: rgb(255, 255, 255);
+}
+.single-team{
+  margin: 20px auto;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+.single-team img{
+  width: 200px;
+  height: auto;
+}
+
+.single-team-info{
+   border: 2px dashed green;
+   color: rgb(255, 255, 255);
+   border-radius: 5px;
+   margin-bottom: 20px;
+   margin: 5px;
+   transition: .5s;
+}
+.single-team-info:hover{
+    background-color: #ccee;
+    color: black;
+}
+.main{
+   line-height: 1.6;
+   background-color: rgba(3, 255, 175, 0.315);
+   margin: 20px;
+   border-radius: 5px;
+   
+}
+
+@media screen and (max-width: 667px){
+    .container{
+        width: 100%;
+    }
+    .flex{
+        width: 100%;
+        display: flex;
+    }
+    input[type="text"]{
+        width: 240px;
+    }
+    .teams{
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 auto;
+    }
+    .team{
+        height: 200px;
+        width: 200px;
+        
+    }
+    .title{
+        color: white;
+    }
+
+    body{
+        background: #71ceef;
+    }
+}
